@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #11998E, #1CBF88, #38EF7D);
+}
+
+/* Title Bar Styles */
+.title-bar {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title-bar img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.title-bar h1 {
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 600px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.left-section,
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Display children vertically */
+}
+
+.left-section {
+    text-align: center;
+    color: #333;
+    padding: 20px;
+    position: relative; /* Positioning context for absolute positioning */
+}
+
+.left-section h1 {
+    margin: 0;
+}
+
+.left-section p {
+    color: #333;
+    flex: 1; /* Expand to fill remaining space */
+}
+
+.right-section {
+    background: #f7f7f7;
+    padding: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+button {
+    width: 80px;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #2A9D8F;
+    color: white;
+    border: 1px solid #257d74;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #1e7d72;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset button is fixed to the bottom */
+#resetButton {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+}
