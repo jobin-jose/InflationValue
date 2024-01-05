@@ -3,52 +3,86 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+   /* align-items: center; */
     background: linear-gradient(to right, #11998E, #1CBF88, #38EF7D);
 }
 
-/* Title Bar Styles */
 .title-bar {
+    background-color: #ffff;          
+    padding: 5px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    background: #fff;
-    padding: 10px;
-    width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 590px; /* Set a maximum width */
+    border-radius: 10px;
+    margin-top: 10px;
+	align-self: center;
 }
 
-.title-bar img {
-    width: 40px;
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 15px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-right: 10px;
 }
 
-.title-bar h1 {
-    margin: 0;
-    color: #333;
+.nav-link {
+    color: #11998E;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
 .container {
     display: flex;
-    width: 600px;
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 800px; /* Set a maximum width */
+	min-height: 360px;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
+	align-self: center;
+}
+
+.read-section {
+    /* 
+	display: flex;
+    max-width: 600px; /* Set a maximum width 	*/
+    
+	width: 80%; /* Adjust width for responsiveness */
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+	padding-left:10px;
+	padding-right:10px;
+	flex-direction: column; /* Arrange items in a column */
+	align-items: center;
+	align-self: center;
 }
 
 .left-section,
 .right-section {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Display children vertically */
+    flex-direction: column;
 }
 
 .left-section {
     text-align: center;
     color: #333;
     padding: 20px;
-    position: relative; /* Positioning context for absolute positioning */
+    position: relative;
 }
 
 .left-section h1 {
@@ -57,7 +91,7 @@ body {
 
 .left-section p {
     color: #333;
-    flex: 1; /* Expand to fill remaining space */
+    flex: 1;
 }
 
 .right-section {
@@ -95,9 +129,25 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Reset button is fixed to the bottom */
 #resetButton {
     position: absolute;
     bottom: 10px;
     left: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .title-bar, .container, .read-section {
+        width: 90%;
+        max-width: none;
+    }
+	
+    .nav-links {
+        justify-content: flex-end;
+        margin-right: 0;
+    }
+    .nav-link {
+        margin-left: 10px;
+    }
+}
+
+
