@@ -5,18 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inflation Value</title>
     <link rel="stylesheet" href="styles.css">
+	
 </head>
+
 <body>
 
-    <!-- Title Bar -->
-	<!--
+    <!-- Title Bar --> 
+	
     <div class="title-bar">
-        <img src="https://keydifferences.com/wp-content/uploads/2016/04/demand-pull-and-cost-push-inflation.jpg" alt="InflationValue.com Logo">
-      <p><i>your inflation value calculator..</i></p>
-    </div>
-	-->
+		<div class="logo-and-tagline">
+			<img src="logo.png" alt="InflationValue.com" class="logo">
+		<!--	<div class="tagline"><i>your inflation value calculator..</i></div> -->
+		</div>
+		
+		<!-- Right side with hyperlink pages -->
+		<div class="nav-links">
+			<a href="#" class="nav-link">Home</a>
+			<a href="#" class="nav-link">Read</a>
+		</div>
+	</div>
+
+
+
+	
     <!-- Main Content -->
-    <div class="container">
+    <div class="container"> 
         <div class="left-section">
             <h1>Curious about inflation?</h1>
             <p>Estimate the today's value of future money adjusted for inflation.</p>
@@ -34,8 +47,29 @@
             <input type="number" id="numberOfYears" placeholder="No. of years from today">
 
             <!-- Calculate button is now on the right side -->
-            <button onclick="calculatePresentValue()">Calculate</button>
+            <button onclick="calculatePresentValue()">Calculate</button> 	
         </div>
+    </div>
+
+	<!-- New div for the article -->
+    <div class="read-section">
+        <h3>Understanding Inflation's Impact on Your Money</h3>
+        <p>Whether you're planning for the future or navigating the present, economic factors like inflation play a significant role in shaping the value of your money...</p>
+        <h3>What is Inflation?</h3>
+		​Inflation is a rise in the overall level of prices in an economy. This rise in prices can be caused by a number of factors, such as an increase in the cost of production, or a decrease in the currency's value.
+		
+		Inflation can be good or bad for an economy, depending on the level of inflation and the health of the economy.
+		For example, a small amount of inflation can be good for an economy because it encourages spending and investment. 
+		But too much inflation can be bad for an economy because it can lead to economic instability and higher unemployment.
+		
+		<h3>How Inflation Affects Your Purchasing Power</h3>
+		<p>Inflation reflects a rise in prices and as a result, each unit of currency buys fewer goods and services. 
+		The value of investments may also be eroded by inflation.</p>
+		
+		<h3>How to Invest to Protect Your Money from Inflation</h3>
+		<p>The best way to protect your money from inflation is to invest in assets that have the potential to increase in value at a rate greater than the rate of inflation.</p>
+		<p>Stocks, Real estate, Gold etc are some of the examples for inflation beating assets.</p>
+		
     </div>
 
     <script src="script.js"></script>
