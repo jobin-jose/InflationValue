@@ -21,7 +21,7 @@ body {
 }
 
 .logo {
-    width: 100px;
+    width: 70%;
     height: auto;
     margin-left: 5px;
     margin-right: 15px;
@@ -51,6 +51,15 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
 	align-self: center;
+}
+
+.homepage-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .read-section {
@@ -97,6 +106,9 @@ body {
 .right-section {
     background: #f7f7f7;
     padding: 20px;
+	display: flex;
+    justify-content: space-between; /* Align items with space in between */
+	/*align-items: center; /* Align items vertically in the center */
 }
 
 label {
@@ -111,7 +123,7 @@ input {
     box-sizing: border-box;
     font-size: 14px;
 }
-
+/*
 button {
     width: 80px;
     padding: 8px;
@@ -123,10 +135,37 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
 }
+*/
+button {
+    /*flex-basis: 48%; /* Set the buttons to take up 48% of the width */
+    padding: 10px;
+    background-color: #2A9D8F;
+    color: white;
+    border: 1px solid #257d74;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+	margin-top: 10px;
+	width: 180px;
+}
 
 button:hover {
     background-color: #1e7d72;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result {
+  /*  display: flex;
+    align-items: center;
+    justify-content: center; 
+	background-color: #f7f7f7;
+	color: #2A9D8F; */
+	margin-bottom: 50px;
+}
+
+.homepage-section button {
+    width: 50%;
+    box-sizing: border-box;
 }
 
 #resetButton {

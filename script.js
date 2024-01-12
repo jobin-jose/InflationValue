@@ -21,3 +21,41 @@ function resetValues() {
     document.getElementById("numberOfYears").value = "";
     document.getElementById("result").innerHTML = "";
 }
+
+// Function to redirect to the Inflation Value Calculator page
+function redirectToInflationCalculator() {
+    window.location.href = 'inflation-calculator.html'; 
+}
+
+// Function to redirect to the Percentage Increase Calculator page
+function redirectToPercentageIncreaseCalculator() {
+    window.location.href = 'percentage-increase-calculator.html'; 
+}
+
+// Function to calculate the percentage increase
+function calculatePercentageIncrease() {
+    // Get the input values
+    const startingValue = document.getElementById("startingValue").value;
+    const finalValue = document.getElementById("finalValue").value;
+
+    // Check if both inputs are valid numbers
+    if (isNaN(startingValue) || isNaN(finalValue)) {
+        alert("Please enter valid numbers for both starting and final values.");
+        return;
+    }
+
+    // Calculate the percentage increase
+    const percentageIncrease = ((finalValue - startingValue) / startingValue) * 100;
+
+    // Display the result
+    const resultElement = document.getElementById("result");
+    resultElement.innerHTML = `<strong>${startingValue}</strong> to <strong>${finalValue}</strong> is a percentage change of <strong>${percentageIncrease.toFixed(2)}%</strong>`;
+}
+
+// Function to reset input values and result
+function resetPIValues() {
+	document.getElementById("startingValue").value = "";
+    document.getElementById("finalValue").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+

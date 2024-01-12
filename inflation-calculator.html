@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trueCalculate</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/x-icon" href="favIco.ico">
+	
+</head>
+
+<body>
+
+    <!-- Title Bar --> 
+	
+    <div class="title-bar">
+		<div class="logo-and-tagline">
+			<img src="logo.png" alt="trueCalculate.com" class="logo">
+		
+		</div>
+		
+		<!-- Right side with hyperlink pages -->
+		<div class="nav-links">
+			<a href="index.html" class="nav-link">Home</a>
+			<a href="read.html" class="nav-link">Read</a>
+		</div>
+	</div>
+
+
+
+	
+    <!-- Main Content -->
+    <div class="container"> 
+        <div class="left-section">
+            <h1>Curious about inflation?</h1>
+            <p>Estimate the today's value of future money adjusted for inflation.</p>
+            <div  id="result"></div>
+            
+        </div>
+        <div class="right-section">
+            <label for="futureValue">Amount:</label>
+            <input type="number" id="futureValue" placeholder="Enter amount in future">
+
+            <label for="inflationRate">Annual Inflation Rate(%):</label>
+            <input type="number" id="inflationRate" placeholder="eg: 7">
+
+            <label for="numberOfYears">Number of Years:</label>
+            <input type="number" id="numberOfYears" placeholder="No. of years from today">
+
+            <!-- Calculate button is now on the right side -->
+			<button onclick="calculatePresentValue()">Calculate</button> 
+			<button onclick="resetValues()">Reset</button>         	
+        </div>
+    </div>
+
+	
+
+    <script src="script.js"></script>
+</body>
+</html>
