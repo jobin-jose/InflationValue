@@ -32,6 +32,10 @@ function redirectToPercentageIncreaseCalculator() {
     window.location.href = 'percentage-increase-calculator.html'; 
 }
 
+function redirectToQuantityCostCalculator() {
+    window.location.href = 'quantity-cost-calculator.html';
+}
+
 // Function to calculate the percentage increase
 function calculatePercentageIncrease() {
     // Get the input values
@@ -56,6 +60,34 @@ function calculatePercentageIncrease() {
 function resetPIValues() {
 	document.getElementById("startingValue").value = "";
     document.getElementById("finalValue").value = "";
+    document.getElementById("result").innerHTML = "";
+}
+
+function calculateProportionalValue() {
+    // Get values from input fields
+    const knownQuantity = parseFloat(document.getElementById('knownQuantity').value);
+    const knownCost = parseFloat(document.getElementById('knownCost').value);
+    const desiredQuantity = parseFloat(document.getElementById('desiredQuantity').value);
+
+    // Check if values are valid numbers
+    if (isNaN(knownQuantity) || isNaN(knownCost) || isNaN(desiredQuantity)) {
+        alert('Please enter valid numeric values.');
+        return;
+    }
+
+    // Calculate cost for the desired quantity
+    const costForDesiredQuantity = (desiredQuantity / knownQuantity) * knownCost;
+
+    // Display the result
+	const resultElement = document.getElementById("result");
+    resultElement.innerHTML = `<strong> ${costForDesiredQuantity} </strong>  <br> If  ${knownQuantity}  →  ${desiredQuantity} , then  ${desiredQuantity}  →  ${costForDesiredQuantity} `;
+    
+}
+
+function resetPVValues() {
+	document.getElementById("knownQuantity").value = "";
+    document.getElementById("knownCost").value = "";
+	document.getElementById("desiredQuantity").value = "";
     document.getElementById("result").innerHTML = "";
 }
 
