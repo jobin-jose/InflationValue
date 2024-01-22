@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trueCalculate</title>
+    <link rel="stylesheet" href="styles.css">
+	<link rel="icon" type="image/x-icon" href="favIco.ico">
+	
+	<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQC1VHBNM0"></script> 
+	<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-MQC1VHBNM0'); </script>
+</head>
+
+<body>
+
+    <!-- Title Bar --> 
+	
+    <div class="title-bar">
+		<div class="logo-and-tagline">
+			<img src="logo.png" alt="trueCalculate.com" class="logo">
+	
+		</div>
+		
+		<!-- Right side with hyperlink pages -->
+		<div class="nav-links">
+			<a href="index.html" class="nav-link">Home</a>
+			<a href="read.html" class="nav-link">Read</a>
+		</div>
+	</div>
+
+
+
+	
+    <!-- Main Content -->
+    <div class="container"> 
+        <div class="left-section">
+            <h1>Calculate change in cost based on quantity</h1>
+            <p>Quantity cost calculation based on proportionality</p>
+            <div class="result" id="result"></div>
+            
+        </div>
+        <div class="right-section">
+            <label for="knownQuantity">Known Quantity:</label>
+            <input type="number" id="knownQuantity" placeholder="e.g., 100" required>
+
+
+            <label for="knownCost">Cost for Known Quantity:</label>
+            <input type="number" id="knownCost" placeholder="e.g., 300" required>
+            
+            <label for="desiredQuantity">Desired Quantity:</label>
+            <input type="number" id="desiredQuantity" placeholder="e.g., 250" required>
+
+            <!-- Calculate button is now on the right side -->
+			<button onclick="calculateProportionalValue()">Calculate</button> 
+			<button onclick="resetPVValues()">Reset</button>         	
+        </div>
+    </div>
+
+	
+
+    <script src="script.js"></script>
+</body>
+</html>
