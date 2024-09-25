@@ -58,7 +58,7 @@ function calculatePercentageIncrease() {
 
 // Function to reset input values and result
 function resetPIValues() {
-	document.getElementById("startingValue").value = "";
+    document.getElementById("startingValue").value = "";
     document.getElementById("finalValue").value = "";
     document.getElementById("result").innerHTML = "";
 }
@@ -76,18 +76,18 @@ function calculateProportionalValue() {
     }
 
     // Calculate cost for the desired quantity
-    const costForDesiredQuantity = (desiredQuantity / knownQuantity) * knownCost;
+    	const costForDesiredQuantity = ((desiredQuantity / knownQuantity) * knownCost).toFixed(2);
 
     // Display the result
 	const resultElement = document.getElementById("result");
-    resultElement.innerHTML = `<strong> ${costForDesiredQuantity} </strong>  <br> If  ${knownQuantity}  →  ${desiredQuantity} , then  ${desiredQuantity}  →  ${costForDesiredQuantity} `;
+    	resultElement.innerHTML = `<strong> ${costForDesiredQuantity} </strong>  <br> If  ${knownQuantity}  →  ${desiredQuantity} , then  ${desiredQuantity}  →  ${costForDesiredQuantity} `;
     
 }
 
 function resetPVValues() {
 	document.getElementById("knownQuantity").value = "";
-    document.getElementById("knownCost").value = "";
+   	document.getElementById("knownCost").value = "";
 	document.getElementById("desiredQuantity").value = "";
-    document.getElementById("result").innerHTML = "";
+    	document.getElementById("result").innerHTML = "";
 }
 
